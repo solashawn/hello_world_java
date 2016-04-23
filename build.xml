@@ -1,15 +1,15 @@
 <project name="hello world" default="package" basedir=".">
  
 	<!-- Project Global Properties -->
-	<property name="src.dir" location="src"/>
-	<property name="build.dir" value="build"/>
+	<property name="src.dir" location="src/main/webapp"/>
+	<property name="build.dir" value="target"/>
 	<property name="name" value="alina_app"/>
 	
 	<!-- Create the final WAR file for deployment -->
 	<target name="package" depends="clean" description="create a war file">
 		<mkdir dir="${build.dir}"/>
 		<war destfile="${build.dir}/${name}.war" webxml="${src.dir}/WEB-INF/web.xml">
-			<fileset dir="${src.dir}">
+			<fileset dir="${src.dir}/">
 				<include name="*.jsp"/>
 			</fileset>
 		</war>
