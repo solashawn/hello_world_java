@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>alina_app</finalName>
+    <finalName>alina_app_maven</finalName>
   </build>
 </project>
